@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Head from '../components/Head';
 
 class Page extends Component {
@@ -6,10 +6,12 @@ class Page extends Component {
     const { children, title } = this.props;
 
     return (
-      <div className="page-container">
+      <Fragment>
         <Head title={title} />
-        <React.Fragment>{children}</React.Fragment>
-      </div>
+        <div className="page-container">
+          <React.Fragment>{children}</React.Fragment>
+        </div>
+      </Fragment>
     );
   }
 }

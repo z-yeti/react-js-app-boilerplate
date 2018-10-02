@@ -3,10 +3,11 @@ import { action, observable } from 'mobx';
 let store = null;
 
 class Store {
-  @observable hello = 'Hello World!';
+  @observable
+  test = 'works';
 }
 
-export function initStore(isServer) {
+export function initializeStore(isServer) {
   if (isServer) {
     return new Store(isServer);
   } else {

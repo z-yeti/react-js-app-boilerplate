@@ -11,12 +11,13 @@ mobxReact.useStaticRendering(true);
 
 app.prepare().then(() => {
   const server = express();
+
   server.get('*', (req, res) => {
     return handle(req, res);
   });
-  /* eslint-disable no-console */
+
   server.listen(port, err => {
     if (err) throw err;
-    console.log(`Serving from http://localhost:${port}`);
+    console.log(`> Ready on http://localhost:${port}`);
   });
 });
