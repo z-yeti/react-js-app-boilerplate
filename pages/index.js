@@ -1,3 +1,8 @@
 import React from 'react';
 
-export default () => <p>poop</p>;
+export default () => (
+  <div>
+    <p>{process.env.TEST}</p>
+    <p>poop</p>
+  </div>
+);
