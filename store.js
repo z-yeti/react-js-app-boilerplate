@@ -4,7 +4,7 @@ let store = null;
 
 class Store {
   @observable
-  test = 'mobX store works';
+  test = 'works';
 }
 
 export function initializeStore(isServer) {

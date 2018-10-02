@@ -34,29 +34,6 @@ const Head = props => (
       href="https://fonts.googleapis.com/css?family=Lato|Roboto"
       rel="stylesheet"
     />
-    <style jsx global>{`
-      body {
-        margin: 0;
-        font: 16px Lato;
-        background-color: #dbdfe1;
-      }
-      ul,
-      li,
-      a,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5 {
-        text-decoration: none;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-      svg {
-        max-width: 1em;
-      }
-    `}</style>
   </NextHead>
 );
 
