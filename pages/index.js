@@ -1,8 +1,11 @@
 import React from 'react';
+import Page from '../containers/Page';
+import IndexPage from '../containers/IndexPage';
 
 export default () => (
   <div>
-    <p>{process.env.TEST}</p>
-    <p>poop</p>
+    <Page title="Index Page">
+      <IndexPage />
+    </Page>
   </div>
 );
