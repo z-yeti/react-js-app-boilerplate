@@ -21,7 +21,7 @@
 - ### Clone this repo
 - ### `cd /react-js-app-boilerplate`
 - ### `nvm use`
-- ### `yarn install`
+- ### `yarn`
 - ### `yarn dev`
 
 # Firebase Setup
