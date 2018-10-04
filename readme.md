@@ -21,3 +21,7 @@
 - ### `nvm use`
 - ### `yarn install`
 - ### `yarn dev`
+
+# Want some firebase auth with all this?
+
+## [Click on me](https://github.com/z-yeti/react-js-app-boilerplate/tree/with-firebase-auth-db)
