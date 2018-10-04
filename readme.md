@@ -20,6 +20,7 @@
 - ### `cd /react-js-app-boilerplate`
 - ### `nvm use`
 - ### `yarn install`
+- ### `cp .env.example .env`
 - ### `yarn dev`
 
 # Want some firebase auth with all this?
