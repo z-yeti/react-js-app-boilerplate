@@ -50,6 +50,11 @@ class SignUp extends Component {
         this.doCreateUser(authUser.user.uid, username, email);
       })
       .then(() => {
+        auth.currentUser.updateProfile({
+          displayName: username
+        });
+      })
+      .then(() => {
         checkAuthUser();
       })
       .catch(error => {
@@ -61,7 +66,13 @@ class SignUp extends Component {
   render() {
     const { username, email, passwordOne, passwordTwo, error } = this.state;
     const { updateByPropertyName } = this.props.store;
-
+    const formInputs = [
+      //['value/stateName', 'type', 'placeholder']
+      [username, 'username', 'text', 'Username'],
+      [email, 'email', 'text', 'E-mail'],
+      [passwordOne, 'passwordOne', 'password', 'Password'],
+      [passwordTwo, 'passwordTwo', 'password', 'Confirm Password']
+    ];
     const isInvalid =
       passwordOne !== passwordTwo ||
       passwordOne === '' ||
@@ -70,46 +81,25 @@ class SignUp extends Component {
 
     return (
       <AuthForm onSubmit={this.onSubmit}>
-        <input
-          value={username}
-          onChange={event =>
-            this.setState(updateByPropertyName('username', event.target.value))
-          }
-          type="text"
-          placeholder="Username"
-        />
-        <input
-          value={email}
-          onChange={event =>
-            this.setState(updateByPropertyName('email', event.target.value))
-          }
-          type="text"
-          placeholder="Email"
-        />
-        <input
-          value={passwordOne}
-          onChange={event =>
-            this.setState(
-              updateByPropertyName('passwordOne', event.target.value)
-            )
-          }
-          type="password"
-          placeholder="Password"
-        />
-        <input
-          value={passwordTwo}
-          onChange={event =>
-            this.setState(
-              updateByPropertyName('passwordTwo', event.target.value)
-            )
-          }
-          type="password"
-          placeholder="Confirm Password"
-        />
+        {formInputs.map(formInput => {
+          const inputKey = formInput[3].toLowerCase().replace(/\s+/g, '-');
+          return (
+            <input
+              key={inputKey}
+              value={formInput[0]}
+              onChange={event =>
+                this.setState(
+                  updateByPropertyName(formInput[1], event.target.value)
+                )
+              }
+              type={formInput[2]}
+              placeholder={formInput[3]}
+            />
+          );
+        })}
         <button disabled={isInvalid} type="submit">
           Sign Up
         </button>
-
         {error && <p>{error.message}</p>}
       </AuthForm>
     );

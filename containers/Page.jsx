@@ -6,8 +6,10 @@ import Head from '../components/Head';
 @observer
 class Page extends Component {
   componentDidMount() {
-    this.props.store.checkAuthUser();
+    const { checkAuthUser } = this.props.store;
+    checkAuthUser();
   }
+
   render() {
     const { children, title } = this.props;
 

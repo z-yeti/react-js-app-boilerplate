@@ -1,8 +1,9 @@
+/* global window */
 import React from 'react';
 import { initializeStore } from '../store';
 
 const isServer = typeof window === 'undefined';
-const __NEXT_MOBX_STORE__ = '__NEXT_MOBX_STORE__';
+const NEXT_MOBX_STORE = 'NEXT_MOBX_STORE';
 
 function getOrCreateStore(initialState) {
   // Always make a new store if server, otherwise state is shared between requests
@@ -11,10 +12,10 @@ function getOrCreateStore(initialState) {
   }
 
   // Create store if unavailable on the client and set it on the window object
-  if (!window[__NEXT_MOBX_STORE__]) {
-    window[__NEXT_MOBX_STORE__] = initializeStore(initialState);
+  if (!window[NEXT_MOBX_STORE]) {
+    window[NEXT_MOBX_STORE] = initializeStore(initialState);
   }
-  return window[__NEXT_MOBX_STORE__];
+  return window[NEXT_MOBX_STORE];
 }
 
 export default App => {

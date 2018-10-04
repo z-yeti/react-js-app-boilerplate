@@ -1,7 +1,7 @@
-import App, { Container } from 'next/app';
 import React from 'react';
-import withMobxStore from '../lib/with-mobx-store';
+import App, { Container } from 'next/app';
 import { Provider } from 'mobx-react';
+import withMobxStore from '../lib/with-mobx-store';
 
 class MyApp extends App {
   render() {
