@@ -1,4 +1,3 @@
-/* global window */
 import React from 'react';
 import { initializeStore } from '../store';
 
