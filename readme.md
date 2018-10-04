@@ -20,6 +20,7 @@
 
 - ### Clone this repo
 - ### `cd /react-js-app-boilerplate`
+- ### `git checkout with-firebase-auth-db`
 - ### `nvm use`
 - ### `yarn`
 - ### `cp .env.example .env`
