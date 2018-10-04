@@ -11,3 +11,13 @@
 ### [MobX](https://github.com/mobxjs/mobx)
 
 ### [Styled Components](https://github.com/styled-components/styled-components)
+
+### Node v8.9.0 (use nvm)
+
+# Project Setup
+
+- ### Clone this repo
+- ### `cd /react-js-app-boilerplate`
+- ### `nvm use`
+- ### `yarn install`
+- ### `yarn dev`
