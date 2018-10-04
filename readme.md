@@ -22,6 +22,7 @@
 - ### `cd /react-js-app-boilerplate`
 - ### `nvm use`
 - ### `yarn`
+- ### `cp .env.example .env`
 - ### `yarn dev`
 
 # Firebase Setup
