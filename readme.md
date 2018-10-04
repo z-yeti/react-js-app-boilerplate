@@ -29,7 +29,9 @@
 
 - ### Go to the [Firebase Console](https://console.firebase.google.com/)
 - ### Create a project
-- ### Authentication -> Web Setup
+- ### Firebase -> Authentication -> Web Setup
 - ### Copy creds over to the your .env file.
+- ### Firebase -> Authentication -> Sign In Method -> Enable Email/Password and save
+- ### Firebase -> Database -> Create Realtime Database -> Start In Test Mode
 - ### `yarn dev`
 - ### Sign up and go back to your firebase console and you will see it has stored your new user and created a database entry.
